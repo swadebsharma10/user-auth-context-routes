@@ -4,6 +4,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import PrivetRoute from './components/PrivetRoute/PrivetRoute';
 import Root from './components/Root/Root';
 import './index.css';
 import About from './Pages/About/About';
@@ -24,7 +25,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/about',
-        element: <About></About>
+        element: <PrivetRoute> <About></About></PrivetRoute>
       },
       {
         path: '/login',
